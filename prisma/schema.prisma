@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Employee {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  name      String
+  role      Role     @default(STAFF)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("employees")
+}
+
+model Tourist {
+  id          String    @id @default(cuid())
+  email       String    @unique
+  username    String    @unique
+  password    String
+  name        String
+  phone       String?
+  address     String?
+  dateOfBirth DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  travels Travel[]
+
+  @@map("tourists")
+}
+
+model Travel {
+  id                        String       @id @default(cuid())
+  touristId                 String
+  tanggalMulaiPerjalanan    DateTime
+  tanggalBerakhirPerjalanan DateTime
+  destinasiPerjalanan       Json
+  notes                     String?
+  status                    TravelStatus @default(PLANNED)
+  createdAt                 DateTime     @default(now())
+  updatedAt                 DateTime     @updatedAt
+
+  tourist Tourist @relation(fields: [touristId], references: [id], onDelete: Cascade)
+
+  @@map("travels")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+}
+
+enum TravelStatus {
+  PLANNED
+  ONGOING
+  COMPLETED
+  CANCELLED
+}
