@@ -11,10 +11,10 @@ export class AuthController {
   loginEmployee = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = await this.authService.loginEmployee(req.body);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Login successful",
         data: result,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -24,10 +24,10 @@ export class AuthController {
   loginTourist = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = await this.authService.loginTourist(req.body);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Login successful",
         data: result,
-        status: "success",
       });
     } catch (error) {
       next(error);

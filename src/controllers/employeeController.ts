@@ -24,10 +24,10 @@ export class EmployeeController {
   getAllEmployees = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const employees = await this.employeeService.getAllEmployees();
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Employees retrieved successfully",
         data: employees,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -38,10 +38,10 @@ export class EmployeeController {
     try {
       const { id } = req.params;
       const employee = await this.employeeService.getEmployeeById(id);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Employee retrieved successfully",
         data: employee,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -52,10 +52,10 @@ export class EmployeeController {
     try {
       const { id } = req.params;
       const employee = await this.employeeService.updateEmployee(id, req.body);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Employee updated successfully",
         data: employee,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -66,9 +66,9 @@ export class EmployeeController {
     try {
       const { id } = req.params;
       await this.employeeService.deleteEmployee(id);
-      res.json({
-        message: "Employee deleted successfully",
+      res.status(200).json({
         status: "success",
+        message: "Employee deleted successfully",
       });
     } catch (error) {
       next(error);

@@ -9,6 +9,7 @@ export const validateCreateEmployee = (
 
   if (!email || !username || !password || !name) {
     return res.status(400).json({
+      status: "error",
       message: "Email, username, password, and name are required",
     });
   }
@@ -16,12 +17,14 @@ export const validateCreateEmployee = (
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({
+      status: "error",
       message: "Invalid email format",
     });
   }
 
   if (password.length < 6) {
     return res.status(400).json({
+      status: "error",
       message: "Password must be at least 6 characters long",
     });
   }
@@ -38,6 +41,7 @@ export const validateCreateTourist = (
 
   if (!email || !username || !password || !name) {
     return res.status(400).json({
+      status: "error",
       message: "Email, username, password, and name are required",
     });
   }
@@ -45,12 +49,14 @@ export const validateCreateTourist = (
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({
+      status: "error",
       message: "Invalid email format",
     });
   }
 
   if (password.length < 6) {
     return res.status(400).json({
+      status: "error",
       message: "Password must be at least 6 characters long",
     });
   }
@@ -77,12 +83,14 @@ export const validateCreateTravel = (
     !destinasiPerjalanan
   ) {
     return res.status(400).json({
+      status: "error",
       message: "Tourist ID, start date, end date, and destination are required",
     });
   }
 
   if (new Date(tanggalMulaiPerjalanan) >= new Date(tanggalBerakhirPerjalanan)) {
     return res.status(400).json({
+      status: "error",
       message: "End date must be after start date",
     });
   }
@@ -99,6 +107,7 @@ export const validateLogin = (
 
   if (!username || !password) {
     return res.status(400).json({
+      status: "error",
       message: "Username and password are required",
     });
   }

@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from "express";
 import { TravelService } from "../services/travelService";
 import { JwtPayload } from "../types";
 
-
 interface AuthRequest extends Request {
   user?: JwtPayload;
 }
@@ -22,9 +21,9 @@ export class TravelController {
     try {
       const travel = await this.travelService.createTravel(req.body);
       res.status(201).json({
+        status: "success",
         message: "Travel created successfully",
         data: travel,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -34,10 +33,10 @@ export class TravelController {
   getAllTravels = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const travels = await this.travelService.getAllTravels();
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Travels retrieved successfully",
         data: travels,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -48,7 +47,7 @@ export class TravelController {
     try {
       const { id } = req.params;
       const travel = await this.travelService.getTravelById(id);
-      res.json({
+      res.status(200).json({
         message: "Travel retrieved successfully",
         data: travel,
         status: "success",
@@ -67,16 +66,16 @@ export class TravelController {
       const { touristId } = req.params;
       if (req.user?.type === "tourist" && req.user.id !== touristId) {
         return res.status(403).json({
-          message: "You can only view your own travels",
           status: "error",
+          message: "You can only view your own travels",
         });
       }
 
       const travels = await this.travelService.getTravelsByTouristId(touristId);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Travels retrieved successfully",
         data: travels,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -91,18 +90,18 @@ export class TravelController {
     try {
       if (!req.user || req.user.type !== "tourist") {
         return res.status(403).json({
-          message: "Tourist access required",
           status: "error",
+          message: "Tourist access required",
         });
       }
 
       const travels = await this.travelService.getTravelsByTouristId(
         req.user.id
       );
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Your travels retrieved successfully",
         data: travels,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -113,10 +112,10 @@ export class TravelController {
     try {
       const { id } = req.params;
       const travel = await this.travelService.updateTravel(id, req.body);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Travel updated successfully",
         data: travel,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -127,9 +126,9 @@ export class TravelController {
     try {
       const { id } = req.params;
       await this.travelService.deleteTravel(id);
-      res.json({
-        message: "Travel deleted successfully",
+      res.status(200).json({
         status: "success",
+        message: "Travel deleted successfully",
       });
     } catch (error) {
       next(error);

@@ -24,10 +24,10 @@ export class TouristController {
   getAllTourists = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const tourists = await this.touristService.getAllTourists();
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Tourists retrieved successfully",
         data: tourists,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -38,10 +38,10 @@ export class TouristController {
     try {
       const { id } = req.params;
       const tourist = await this.touristService.getTouristById(id);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Tourist retrieved successfully",
         data: tourist,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -52,10 +52,10 @@ export class TouristController {
     try {
       const { id } = req.params;
       const tourist = await this.touristService.updateTourist(id, req.body);
-      res.json({
+      res.status(200).json({
+        status: "success",
         message: "Tourist updated successfully",
         data: tourist,
-        status: "success",
       });
     } catch (error) {
       next(error);
@@ -66,9 +66,9 @@ export class TouristController {
     try {
       const { id } = req.params;
       await this.touristService.deleteTourist(id);
-      res.json({
-        message: "Tourist deleted successfully",
+      res.status(200).json({
         status: "success",
+        message: "Tourist deleted successfully",
       });
     } catch (error) {
       next(error);

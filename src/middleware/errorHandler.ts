@@ -8,26 +8,19 @@ export const errorHandler = (
 ) => {
   console.error("Error:", error);
 
-  if (error.message.includes("not found")) {
-    return res.status(404).json({
-      message: error.message,
-      status: "error",
-    });
+  if (res.headersSent) {
+    return next(error);
   }
 
-  if (
-    error.message.includes("already exists") ||
-    error.message.includes("Invalid credentials") ||
-    error.message.includes("End date must be after start date")
-  ) {
-    return res.status(400).json({
-      message: error.message,
-      status: "error",
-    });
-  }
-
-  res.status(500).json({
-    message: "Internal server error",
+  return res.status(500).json({
     status: "error",
+    message: error.message,
+  });
+};
+
+export const notFoundHandler = (req: Request, res: Response) => {
+  return res.status(404).json({
+    status: "error",
+    message: "Route not found",
   });
 };
