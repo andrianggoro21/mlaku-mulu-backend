@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "c5e0b4ed-e143-43e2-8e6f-29af8386add0",
-		"name": "mlaku-mulu",
+		"name": "mlaku-mulu-dev",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "43819320"
 	},
@@ -802,7 +802,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "7e4987e2-ceec-4192-98b9-4d0cc6e7fbcc"
+											"value": "63fa5a96-f3f0-4451-90bd-19f59143c48f"
 										}
 									]
 								}
@@ -1341,7 +1341,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "4e47374b-fd9f-46fc-b3c9-d11c1ba19410"
+											"value": "63fa5a96-f3f0-4451-90bd-19f59143c48f"
 										}
 									]
 								}
@@ -1589,7 +1589,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n\r\n}",
+									"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2072,8 +2072,37 @@
 						{
 							"name": "Get By Id",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJkM2FkMmNhLTk5YjYtNDU1OS1hZjc4LTdhYjUxZDM1Mzc2MSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwMzYxMzIsImV4cCI6MTc1NDY0MDkzMn0.qzKx7tdH8WS5kB-OITwBWnY0UlLomPHcxIGAN01x3bw",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/tourists/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tourists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "13a11596-8cd7-461c-872d-d907621d97c8"
+										}
+									]
+								}
 							},
 							"response": [
 								{
@@ -2613,7 +2642,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "13a11596-8cd7-461c-872d-d907621d97c8"
+											"value": "f204246c-bb70-40ca-b75d-09ce109f9f2d"
 										}
 									]
 								}
@@ -4672,7 +4701,29 @@
 							"name": "Register",
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/tourists/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tourists",
+										"register"
+									]
+								}
 							},
 							"response": [
 								{

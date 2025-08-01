@@ -1,0 +1,5706 @@
+{
+	"info": {
+		"_postman_id": "b4ece2e1-7be6-42f8-84f4-226301ecb902",
+		"name": "mlaku-mulu-prod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43819320"
+	},
+	"item": [
+		{
+			"name": "For Employee / Pegawai",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login Employee",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/auth/employee/login",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"auth",
+										"employee",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/auth/employee/login",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"auth",
+												"employee",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "466"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:44:27 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1d2-EzoTfdzSl0XVW/geV4BHNZqJJQM\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "MjfWFn8oQj2lCrJGn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk0NjcsImV4cCI6MTc1NDY2NDI2N30.TXS4wO-4537mW0G7yZX2AHe8zxV_o2a4TEvH3gtaiIU\",\n        \"user\": {\n            \"id\": \"b616e085-cedf-41c4-87da-4e8931f77eb1\",\n            \"username\": \"admin\",\n            \"email\": \"admin@mlaku-mulu.com\",\n            \"name\": \"Administrator\",\n            \"role\": \"ADMIN\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/auth/employee/login",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"auth",
+												"employee",
+												"login"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:46:17 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"32-nHlhgoBn2rOjY/pQURBWBfOmom4\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "cE0PXFi_QiKEsHHcn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid credentials\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Employees",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk0NjcsImV4cCI6MTc1NDY2NDI2N30.TXS4wO-4537mW0G7yZX2AHe8zxV_o2a4TEvH3gtaiIU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"staff2@mlaku-mulu.com\",\r\n    \"username\": \"staff2\",\r\n    \"password\": \"staffPassword\",\r\n    \"name\": \"Staff Dua\",\r\n    \"role\": \"STAFF\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"employees"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"staff2@mlaku-mulu.com\",\r\n    \"username\": \"staff2\",\r\n    \"password\": \"staffPassword\",\r\n    \"name\": \"Staff Dua\",\r\n    \"role\": \"STAFF\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "279"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:44:54 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"117-JIRxayp+trHwPExxeliVR8X2mIQ\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "84AzEN_gTuGP5D0jn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Employee created successfully\",\n    \"data\": {\n        \"id\": \"92e37fb9-ad7c-4ce3-8aad-fff3bd963faa\",\n        \"email\": \"staff2@mlaku-mulu.com\",\n        \"username\": \"staff2\",\n        \"name\": \"Staff Dua\",\n        \"role\": \"STAFF\",\n        \"createdAt\": \"2025-08-01T14:44:54.719Z\",\n        \"updatedAt\": \"2025-08-01T14:44:54.719Z\"\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"staff2@mlaku-mulu.com\",\r\n    \"username\": \"staff2\",\r\n    \"password\": \"staffPassword\",\r\n    \"name\": \"Staff Dua\",\r\n    \"role\": \"STAFF\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:45:38 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"36-A+a8CTwLz/Fl3WkQbAghZ7wt3x4\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "LewnAz7ORxqTG-Ehn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Username already exists\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"employees"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "707"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:47:21 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2c3-h6qe4zFEAM0xxcTabKEkbXmSLi0\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "wadFAJCJTtuz-Q0yn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Employees retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"92e37fb9-ad7c-4ce3-8aad-fff3bd963faa\",\n            \"email\": \"staff2@mlaku-mulu.com\",\n            \"username\": \"staff2\",\n            \"name\": \"Staff Dua\",\n            \"role\": \"STAFF\",\n            \"createdAt\": \"2025-08-01T14:44:54.719Z\",\n            \"updatedAt\": \"2025-08-01T14:44:54.719Z\"\n        },\n        {\n            \"id\": \"b616e085-cedf-41c4-87da-4e8931f77eb1\",\n            \"email\": \"admin@mlaku-mulu.com\",\n            \"username\": \"admin\",\n            \"name\": \"Administrator\",\n            \"role\": \"ADMIN\",\n            \"createdAt\": \"2025-08-01T11:35:22.460Z\",\n            \"updatedAt\": \"2025-08-01T11:35:22.460Z\"\n        },\n        {\n            \"id\": \"c10cbfd7-f7b5-4a33-8180-723c3096baac\",\n            \"email\": \"staff1@mlaku-mulu.com\",\n            \"username\": \"staff1\",\n            \"name\": \"Staff Satu\",\n            \"role\": \"STAFF\",\n            \"createdAt\": \"2025-08-01T11:35:23.076Z\",\n            \"updatedAt\": \"2025-08-01T11:35:23.076Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "35"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:48:48 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"23-M/nBppqCIbMRH9eVBqhvnqpRJfU\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "CHO6eiIQTY2Mkc7Cn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Access token required\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"employees",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963faa"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963faa"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "281"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:49:50 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"119-pNcdg49w4LIvc4bYcW28EbbBXf0\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "-rgT50a3T0igvVLfn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Employee retrieved successfully\",\n    \"data\": {\n        \"id\": \"92e37fb9-ad7c-4ce3-8aad-fff3bd963faa\",\n        \"email\": \"staff2@mlaku-mulu.com\",\n        \"username\": \"staff2\",\n        \"name\": \"Staff Dua\",\n        \"role\": \"STAFF\",\n        \"createdAt\": \"2025-08-01T14:44:54.719Z\",\n        \"updatedAt\": \"2025-08-01T14:44:54.719Z\"\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963fa"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "49"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:50:36 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"31-4wI4ISZAeuh1PAhaVqYJOWdIaJA\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "NbCSuTRBR1qqN79pn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Employee not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"staff2@mlaku-mulu.com\",\r\n    \"username\": \"staff2\",\r\n    \"password\": \"staffPassword\",\r\n    \"name\": \"Staff Dua\",\r\n    \"role\": \"STAFF\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"employees",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963faa"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"staff2@mlaku-mulu.com\",\r\n    \"username\": \"staff2\",\r\n    \"password\": \"staffPassword\",\r\n    \"name\": \"Staff Dua\",\r\n    \"role\": \"STAFF\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963faa"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "279"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:51:55 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"117-S/1ih/gT3qHccVcIfpDCsaYq7Z4\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "J4MpJ92RR2ye8Un4xtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Employee updated successfully\",\n    \"data\": {\n        \"id\": \"92e37fb9-ad7c-4ce3-8aad-fff3bd963faa\",\n        \"email\": \"staff2@mlaku-mulu.com\",\n        \"username\": \"staff2\",\n        \"name\": \"Staff Dua\",\n        \"role\": \"STAFF\",\n        \"createdAt\": \"2025-08-01T14:44:54.719Z\",\n        \"updatedAt\": \"2025-08-01T14:51:55.703Z\"\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"staff2@mlaku-mulu.com\",\r\n    \"username\": \"staff2\",\r\n    \"password\": \"staffPassword\",\r\n    \"name\": \"Staff Dua\",\r\n    \"role\": \"STAFF\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963fa"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "49"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:52:33 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"31-4wI4ISZAeuh1PAhaVqYJOWdIaJA\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "sPymNHDXSLqVPjZ3xtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Employee not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"employees",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963faa"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963faa"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "62"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:53:32 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"3e-WH8hAjAsNPMGqJJi+NIr5+J7XJ8\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "mUiBKhsuQ3im5jP_xtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Employee deleted successfully\"\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/employees/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92e37fb9-ad7c-4ce3-8aad-fff3bd963fa"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "49"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:54:02 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"31-4wI4ISZAeuh1PAhaVqYJOWdIaJA\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "N59I1dyjSDy330k3xtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Employee not found\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Tourists",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"tourists"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "371"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:55:36 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"173-l1Kj3Hoqfr4qQGpqyOTRRbOOw2c\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "Hx0l5kcVRmS1vcidxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Tourist created successfully\",\n    \"data\": {\n        \"id\": \"27f918a5-da76-447c-80b2-92e4a0d2bbb6\",\n        \"email\": \"tourist2@example.com\",\n        \"username\": \"tourist2\",\n        \"name\": \"Tourist 2\",\n        \"phone\": \"+62812345677\",\n        \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\n        \"dateOfBirth\": \"1995-02-02T00:00:00.000Z\",\n        \"createdAt\": \"2025-08-01T14:55:36.100Z\",\n        \"updatedAt\": \"2025-08-01T14:55:36.100Z\"\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:56:38 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"36-A+a8CTwLz/Fl3WkQbAghZ7wt3x4\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "axdr1zZHTIalZm0xnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Username already exists\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"tourists"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "678"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:57:14 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2a6-4YnxNfhyDERoiUSjF/xRm26cVZs\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "-Wdslc7PSICVTh-BnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Tourists retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"email\": \"tourist1@example.com\",\n            \"username\": \"tourist1\",\n            \"name\": \"John Doe\",\n            \"phone\": \"+62812345678\",\n            \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\n            \"dateOfBirth\": \"1990-01-01T00:00:00.000Z\",\n            \"createdAt\": \"2025-08-01T11:35:23.534Z\",\n            \"updatedAt\": \"2025-08-01T11:35:23.534Z\"\n        },\n        {\n            \"id\": \"27f918a5-da76-447c-80b2-92e4a0d2bbb6\",\n            \"email\": \"tourist2@example.com\",\n            \"username\": \"tourist2\",\n            \"name\": \"Tourist 2\",\n            \"phone\": \"+62812345677\",\n            \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\n            \"dateOfBirth\": \"1995-02-02T00:00:00.000Z\",\n            \"createdAt\": \"2025-08-01T14:55:36.100Z\",\n            \"updatedAt\": \"2025-08-01T14:55:36.100Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "35"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:58:15 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"23-M/nBppqCIbMRH9eVBqhvnqpRJfU\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "QiWL1BWDRCq7AXOLnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Access token required\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"tourists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb6"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "386"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 14:59:09 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"182-jeEFLnltSYo5Ys/pfvSGCubZl9E\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "eafcaUQDRMqMw5WGnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Tourist retrieved successfully\",\n    \"data\": {\n        \"id\": \"27f918a5-da76-447c-80b2-92e4a0d2bbb6\",\n        \"email\": \"tourist2@example.com\",\n        \"username\": \"tourist2\",\n        \"name\": \"Tourist 2\",\n        \"phone\": \"+62812345677\",\n        \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\n        \"dateOfBirth\": \"1995-02-02T00:00:00.000Z\",\n        \"createdAt\": \"2025-08-01T14:55:36.100Z\",\n        \"updatedAt\": \"2025-08-01T14:55:36.100Z\",\n        \"travels\": []\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:00:46 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"30-ThUjCHKxD2wGXybFpsPIG+Vtlyw\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "9oVC87fDTAO1TGTYxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Tourist not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"tourists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb6"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "371"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:02:19 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"173-BrDMCQkXTESsfxuMTzulZCjgfio\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "z0zyEOziSHyEUSVpxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Tourist updated successfully\",\n    \"data\": {\n        \"id\": \"27f918a5-da76-447c-80b2-92e4a0d2bbb6\",\n        \"email\": \"tourist2@example.com\",\n        \"username\": \"tourist2\",\n        \"name\": \"Tourist 2\",\n        \"phone\": \"+62812345677\",\n        \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\n        \"dateOfBirth\": \"1995-02-02T00:00:00.000Z\",\n        \"createdAt\": \"2025-08-01T14:55:36.100Z\",\n        \"updatedAt\": \"2025-08-01T15:02:19.022Z\"\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:03:00 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"30-ThUjCHKxD2wGXybFpsPIG+Vtlyw\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "S9iAgDtuRfKMcZuwxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Tourist not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"tourists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb6"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "61"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:04:19 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"3d-nGZg1u2c8l90k+BYun0Xf2rCuXA\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "Dw8RL655Rp-g-cyvxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Tourist deleted successfully\"\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27f918a5-da76-447c-80b2-92e4a0d2bbb"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:04:54 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"30-ThUjCHKxD2wGXybFpsPIG+Vtlyw\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "j9leZftRTEKqUMSkxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Tourist not found\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Travels",
+					"item": [
+						{
+							"name": "Get By Tourist Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/tourist/:touristId",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels",
+										"tourist",
+										":touristId"
+									],
+									"variable": [
+										{
+											"key": "touristId",
+											"value": "23b121af-e86a-490f-a718-19ced1503f33"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/tourist/:touristId",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												"tourist",
+												":touristId"
+											],
+											"variable": [
+												{
+													"key": "touristId",
+													"value": "23b121af-e86a-490f-a718-19ced1503f33"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "519"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:06:01 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"207-Tnf+4rneza6t3j2zmHtHnvNX8+Q\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "fpYbaUF0SxqGLWN6npoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Travels retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"19147b42-0f03-42ea-9389-2b35df99ea08\",\n            \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"tanggalMulaiPerjalanan\": \"2024-02-01T08:00:00.000Z\",\n            \"tanggalBerakhirPerjalanan\": \"2024-02-05T18:00:00.000Z\",\n            \"destinasiPerjalanan\": {\n                \"kota\": \"Bali\",\n                \"hotel\": \"Grand Hyatt Bali\",\n                \"tempat\": [\n                    \"Pantai Kuta\",\n                    \"Tanah Lot\",\n                    \"Ubud\"\n                ]\n            },\n            \"notes\": \"Liburan keluarga ke Bali\",\n            \"status\": \"COMPLETED\",\n            \"createdAt\": \"2025-08-01T11:35:23.941Z\",\n            \"updatedAt\": \"2025-08-01T11:35:23.941Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/tourist/:touristId",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												"tourist",
+												":touristId"
+											],
+											"variable": [
+												{
+													"key": "touristId",
+													"value": "23b121af-e86a-490f-a718-19ced1503f3"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:06:30 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"30-ThUjCHKxD2wGXybFpsPIG+Vtlyw\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "6RqVibkrRXGhiSAbnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Tourist not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"touristId\":\"23b121af-e86a-490f-a718-19ced1503f33\",\r\n    \"tanggalMulaiPerjalanan\":\"2024-03-01T09:00:00.000Z\",\r\n    \"tanggalBerakhirPerjalanan\":\"2024-03-05T17:00:00.000Z\",\r\n    \"destinasiPerjalanan\":\"Yogyakarta\",\r\n    \"notes\":\"Wisata budaya Jogja\",\r\n    \"status\": \"PLANNED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"touristId\":\"23b121af-e86a-490f-a718-19ced1503f33\",\r\n    \"tanggalMulaiPerjalanan\":\"2024-03-01T09:00:00.000Z\",\r\n    \"tanggalBerakhirPerjalanan\":\"2024-03-05T17:00:00.000Z\",\r\n    \"destinasiPerjalanan\":\"Yogyakarta\",\r\n    \"notes\":\"Wisata budaya Jogja\",\r\n    \"status\": \"PLANNED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "538"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:08:09 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"21a-XLQ+N8qx24xjK+fYiiQNh4bKiao\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "NWs330KsQwqr-rSdnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Travel created successfully\",\n    \"data\": {\n        \"id\": \"4631ec63-de15-48bf-bc06-88e76906a55a\",\n        \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n        \"tanggalMulaiPerjalanan\": \"2024-03-01T09:00:00.000Z\",\n        \"tanggalBerakhirPerjalanan\": \"2024-03-05T17:00:00.000Z\",\n        \"destinasiPerjalanan\": \"Yogyakarta\",\n        \"notes\": \"Wisata budaya Jogja\",\n        \"status\": \"PLANNED\",\n        \"createdAt\": \"2025-08-01T15:08:09.220Z\",\n        \"updatedAt\": \"2025-08-01T15:08:09.220Z\",\n        \"tourist\": {\n            \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"name\": \"John Doe\",\n            \"email\": \"tourist1@example.com\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"touristId\":\"23b121af-e86a-490f-a718-19ced1503f3\",\r\n    \"tanggalMulaiPerjalanan\":\"2024-03-01T09:00:00.000Z\",\r\n    \"tanggalBerakhirPerjalanan\":\"2024-03-05T17:00:00.000Z\",\r\n    \"destinasiPerjalanan\":\"Yogyakarta\",\r\n    \"notes\":\"Wisata budaya Jogja\",\r\n    \"status\": \"PLANNED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:08:55 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"30-ThUjCHKxD2wGXybFpsPIG+Vtlyw\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "z7xZ7KZwQaK75UxinpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Tourist not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1095"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:10:08 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"447-csInylGnzr6ZnaAl7rt/IV65rFU\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "uJHW160tQZ2c3N22n6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Travels retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"4631ec63-de15-48bf-bc06-88e76906a55a\",\n            \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"tanggalMulaiPerjalanan\": \"2024-03-01T09:00:00.000Z\",\n            \"tanggalBerakhirPerjalanan\": \"2024-03-05T17:00:00.000Z\",\n            \"destinasiPerjalanan\": \"Yogyakarta\",\n            \"notes\": \"Wisata budaya Jogja\",\n            \"status\": \"PLANNED\",\n            \"createdAt\": \"2025-08-01T15:08:09.220Z\",\n            \"updatedAt\": \"2025-08-01T15:08:09.220Z\",\n            \"tourist\": {\n                \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n                \"name\": \"John Doe\",\n                \"email\": \"tourist1@example.com\"\n            }\n        },\n        {\n            \"id\": \"19147b42-0f03-42ea-9389-2b35df99ea08\",\n            \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"tanggalMulaiPerjalanan\": \"2024-02-01T08:00:00.000Z\",\n            \"tanggalBerakhirPerjalanan\": \"2024-02-05T18:00:00.000Z\",\n            \"destinasiPerjalanan\": {\n                \"kota\": \"Bali\",\n                \"hotel\": \"Grand Hyatt Bali\",\n                \"tempat\": [\n                    \"Pantai Kuta\",\n                    \"Tanah Lot\",\n                    \"Ubud\"\n                ]\n            },\n            \"notes\": \"Liburan keluarga ke Bali\",\n            \"status\": \"COMPLETED\",\n            \"createdAt\": \"2025-08-01T11:35:23.941Z\",\n            \"updatedAt\": \"2025-08-01T11:35:23.941Z\",\n            \"tourist\": {\n                \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n                \"name\": \"John Doe\",\n                \"email\": \"tourist1@example.com\"\n            }\n        }\n    ]\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "35"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:10:50 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"23-M/nBppqCIbMRH9eVBqhvnqpRJfU\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "sx4GxP5DQPqd8UuUn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Access token required\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4631ec63-de15-48bf-bc06-88e76906a55a"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4631ec63-de15-48bf-bc06-88e76906a55a"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "540"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:12:01 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"21c-iFyaaKCW0FuGRNF1ize6PvHKyZg\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "GpoP3g-sSAeDD-2zxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Travel retrieved successfully\",\n    \"data\": {\n        \"id\": \"4631ec63-de15-48bf-bc06-88e76906a55a\",\n        \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n        \"tanggalMulaiPerjalanan\": \"2024-03-01T09:00:00.000Z\",\n        \"tanggalBerakhirPerjalanan\": \"2024-03-05T17:00:00.000Z\",\n        \"destinasiPerjalanan\": \"Yogyakarta\",\n        \"notes\": \"Wisata budaya Jogja\",\n        \"status\": \"PLANNED\",\n        \"createdAt\": \"2025-08-01T15:08:09.220Z\",\n        \"updatedAt\": \"2025-08-01T15:08:09.220Z\",\n        \"tourist\": {\n            \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"name\": \"John Doe\",\n            \"email\": \"tourist1@example.com\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4631ec63-de15-48bf-bc06-88e76906a55"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "47"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:12:33 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2f-1yGI6QRfXZD80fxMSHdgYGhNV7Y\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "ud6qZDXnRV28fTygxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Travel not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\r\n    \"tanggalMulaiPerjalanan\": \"2024-03-01\",\r\n    \"tanggalBerakhirPerjalanan\": \"2024-03-06\",\r\n    \"destinasiPerjalanan\": \"Yogyakarta\",\r\n    \"notes\": \"Wisata budaya Jogja\",\r\n    \"status\": \"PLANNED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4631ec63-de15-48bf-bc06-88e76906a55a"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\r\n    \"tanggalMulaiPerjalanan\": \"2024-03-01\",\r\n    \"tanggalBerakhirPerjalanan\": \"2024-03-06\",\r\n    \"destinasiPerjalanan\": \"Yogyakarta\",\r\n    \"notes\": \"Wisata budaya Jogja\",\r\n    \"status\": \"PLANNED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4631ec63-de15-48bf-bc06-88e76906a55a"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "538"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:14:25 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"21a-YtbPFg2kC1MnRXriPUfyqFZNyps\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "Rb9hl7KMSjqxbeLTxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Travel updated successfully\",\n    \"data\": {\n        \"id\": \"4631ec63-de15-48bf-bc06-88e76906a55a\",\n        \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n        \"tanggalMulaiPerjalanan\": \"2024-03-01T00:00:00.000Z\",\n        \"tanggalBerakhirPerjalanan\": \"2024-03-06T00:00:00.000Z\",\n        \"destinasiPerjalanan\": \"Yogyakarta\",\n        \"notes\": \"Wisata budaya Jogja\",\n        \"status\": \"PLANNED\",\n        \"createdAt\": \"2025-08-01T15:08:09.220Z\",\n        \"updatedAt\": \"2025-08-01T15:14:24.991Z\",\n        \"tourist\": {\n            \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"name\": \"John Doe\",\n            \"email\": \"tourist1@example.com\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\r\n    \"tanggalMulaiPerjalanan\": \"2024-03-01\",\r\n    \"tanggalBerakhirPerjalanan\": \"2024-03-06\",\r\n    \"destinasiPerjalanan\": \"Yogyakarta\",\r\n    \"notes\": \"Wisata budaya Jogja\",\r\n    \"status\": \"PLANNED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4631ec63-de15-48bf-bc06-88e76906a55"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "47"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:15:45 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2f-1yGI6QRfXZD80fxMSHdgYGhNV7Y\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "2ZeT-_6TQVyeFN3rxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Travel not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI2MTZlMDg1LWNlZGYtNDFjNC04N2RhLTRlODkzMWY3N2ViMSIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJ0eXBlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NTQwNTk1OTMsImV4cCI6MTc1NDY2NDM5M30.B_GDY8awF_CS5eWrdb083b8oqMuAcWt6eB0oV9eCGe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4631ec63-de15-48bf-bc06-88e76906a55a"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4631ec63-de15-48bf-bc06-88e76906a55a"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:17:20 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"3c-W6YEAOdSqGGfNC3+XL6vd0u0L1Q\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "zCBEaVRPRDiTugIgnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Travel deleted successfully\"\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/:id",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4631ec63-de15-48bf-bc06-88e76906a55"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "47"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:17:52 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2f-1yGI6QRfXZD80fxMSHdgYGhNV7Y\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "VEwVS3NVQzmC7w_RnpoFkQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Travel not found\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "For Tourist",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login Tourist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"tourist1\",\r\n    \"password\": \"tourist123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/auth/tourist/login",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"auth",
+										"tourist",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"tourist1\",\r\n    \"password\": \"tourist123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/auth/tourist/login",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"auth",
+												"tourist",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "432"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:19:23 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1b0-GqNyvNw99xFVhGlt2u8U7KCaENE\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "lfGvneyBT6O7gmcrxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzYjEyMWFmLWU4NmEtNDkwZi1hNzE4LTE5Y2VkMTUwM2YzMyIsInVzZXJuYW1lIjoidG91cmlzdDEiLCJ0eXBlIjoidG91cmlzdCIsImlhdCI6MTc1NDA2MTU2MywiZXhwIjoxNzU0NjY2MzYzfQ.NyHmSxxItxqiMpkBBRjiNmbJY4Obreuj9cknT5m2tY0\",\n        \"user\": {\n            \"id\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"username\": \"tourist1\",\n            \"email\": \"tourist1@example.com\",\n            \"name\": \"John Doe\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"tourist1\",\r\n    \"password\": \"tourist12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/auth/tourist/login",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"auth",
+												"tourist",
+												"login"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:19:57 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"32-nHlhgoBn2rOjY/pQURBWBfOmom4\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "3prw51-fTiul-ljlxtoGcA"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid credentials\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Tourists",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/register",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"tourists",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/register",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "371"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:21:29 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"173-nVCAY9m5at6/AmhCZynumEV7djk\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "aE1eHeckQD-3w01zn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Tourist created successfully\",\n    \"data\": {\n        \"id\": \"760a7ee0-2f10-4567-8a3d-458b59cce889\",\n        \"email\": \"tourist2@example.com\",\n        \"username\": \"tourist2\",\n        \"name\": \"Tourist 2\",\n        \"phone\": \"+62812345677\",\n        \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\n        \"dateOfBirth\": \"1995-02-02T00:00:00.000Z\",\n        \"createdAt\": \"2025-08-01T15:21:29.063Z\",\n        \"updatedAt\": \"2025-08-01T15:21:29.063Z\"\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tourist2@example.com\",\r\n    \"username\": \"tourist2\",\r\n    \"password\": \"tourist123\",\r\n    \"name\": \"Tourist 2\",\r\n    \"phone\": \"+62812345677\",\r\n    \"address\": \"Jl. Contoh No. 123, Yogyakarta\",\r\n    \"dateOfBirth\": \"1995-02-02\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/tourists/register",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"tourists",
+												"register"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:22:43 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"36-A+a8CTwLz/Fl3WkQbAghZ7wt3x4\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "b25SHVewSciU0sqFn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"error\",\n    \"message\": \"Username already exists\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Travels",
+					"item": [
+						{
+							"name": "Get My Travels",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzYjEyMWFmLWU4NmEtNDkwZi1hNzE4LTE5Y2VkMTUwM2YzMyIsInVzZXJuYW1lIjoidG91cmlzdDEiLCJ0eXBlIjoidG91cmlzdCIsImlhdCI6MTc1NDA2MTcwOSwiZXhwIjoxNzU0NjY2NTA5fQ.JiuMHKA0wyo1HXxgihr8Eh52Qma_TnXbKpb_e9kS5qg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/my-travels",
+									"protocol": "https",
+									"host": [
+										"mlaku-mulu-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"travels",
+										"my-travels"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/my-travels",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												"my-travels"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "524"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:24:01 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"20c-dgY20gWxOb1XmO7/yasklY3tIMw\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "-fl1ZrtlSfOECYp8n6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Your travels retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"19147b42-0f03-42ea-9389-2b35df99ea08\",\n            \"touristId\": \"23b121af-e86a-490f-a718-19ced1503f33\",\n            \"tanggalMulaiPerjalanan\": \"2024-02-01T08:00:00.000Z\",\n            \"tanggalBerakhirPerjalanan\": \"2024-02-05T18:00:00.000Z\",\n            \"destinasiPerjalanan\": {\n                \"kota\": \"Bali\",\n                \"hotel\": \"Grand Hyatt Bali\",\n                \"tempat\": [\n                    \"Pantai Kuta\",\n                    \"Tanah Lot\",\n                    \"Ubud\"\n                ]\n            },\n            \"notes\": \"Liburan keluarga ke Bali\",\n            \"status\": \"COMPLETED\",\n            \"createdAt\": \"2025-08-01T11:35:23.941Z\",\n            \"updatedAt\": \"2025-08-01T11:35:23.941Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/travels/my-travels",
+											"protocol": "https",
+											"host": [
+												"mlaku-mulu-backend-production",
+												"up",
+												"railway",
+												"app"
+											],
+											"path": [
+												"api",
+												"travels",
+												"my-travels"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Length",
+											"value": "35"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 01 Aug 2025 15:24:31 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"23-M/nBppqCIbMRH9eVBqhvnqpRJfU\""
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Server",
+											"value": "railway-edge"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Dns-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-Railway-Edge",
+											"value": "railway/us-west2"
+										},
+										{
+											"key": "X-Railway-Request-Id",
+											"value": "rVIs4OnDT-yxoUKtn6XIxQ"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Access token required\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mlaku-mulu-backend-production.up.railway.app/api/health",
+					"protocol": "https",
+					"host": [
+						"mlaku-mulu-backend-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6a-2ecn1KA/ysgZZ/Sf2SU8TidjgJY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Aug 2025 03:48:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Mlaku-Mulu Backend API is running!\",\n    \"status\": \"success\",\n    \"timestamp\": \"2025-08-01T03:48:00.458Z\"\n}"
+				},
+				{
+					"name": "Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/healt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"healt"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-HDnue+KUfLFcpf/g2U3nvvin5TA\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Aug 2025 09:44:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Route not found\"\n}"
+				}
+			]
+		}
+	]
+}
