@@ -1,8 +1,9 @@
 import { Router } from "express";
-import authRouter from "./authRoute";
 import { errorHandler } from "../middleware/errorHandler";
+import authRouter from "./authRoute";
 import employeeRouter from "./employeeRoute";
 import touristRouter from "./touristRoute";
+import travelRouter from "./travelRoute";
 
 const mainRouter = Router();
 
@@ -17,6 +18,7 @@ mainRouter.get("/health", (req, res) => {
 mainRouter.use("/auth", authRouter);
 mainRouter.use("/employees", employeeRouter);
 mainRouter.use("/tourists", touristRouter);
+mainRouter.use("/travels", travelRouter);
 
 mainRouter.use(errorHandler);
 
