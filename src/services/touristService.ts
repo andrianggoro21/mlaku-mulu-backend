@@ -22,10 +22,12 @@ export class TouristService {
       throw new Error("Email already exists");
     }
 
+    const dateOfBirth = data.dateOfBirth ? new Date(data.dateOfBirth) : null;
     const hashedPassword = await PasswordUtil.hash(data.password);
     const tourist = await this.touristRepository.create({
       ...data,
       password: hashedPassword,
+      dateOfBirth,
     });
 
     const { password, ...touristWithoutPassword } = tourist;
@@ -53,6 +55,10 @@ export class TouristService {
 
     if (data.password) {
       data.password = await PasswordUtil.hash(data.password);
+    }
+
+    if (data.dateOfBirth) {
+      data.dateOfBirth = new Date(data.dateOfBirth);
     }
 
     const updatedTourist = await this.touristRepository.update(id, data);

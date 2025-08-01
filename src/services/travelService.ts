@@ -24,6 +24,14 @@ export class TravelService {
       throw new Error("End date must be after start date");
     }
 
+    if (data.tanggalMulaiPerjalanan) {
+      data.tanggalMulaiPerjalanan = new Date(data.tanggalMulaiPerjalanan);
+    }
+
+    if (data.tanggalBerakhirPerjalanan) {
+      data.tanggalBerakhirPerjalanan = new Date(data.tanggalBerakhirPerjalanan);
+    }
+
     return this.travelRepository.create(data);
   }
 
@@ -60,6 +68,14 @@ export class TravelService {
       ) {
         throw new Error("End date must be after start date");
       }
+    }
+
+    if (data.tanggalMulaiPerjalanan) {
+      data.tanggalMulaiPerjalanan = new Date(data.tanggalMulaiPerjalanan);
+    }
+
+    if (data.tanggalBerakhirPerjalanan) {
+      data.tanggalBerakhirPerjalanan = new Date(data.tanggalBerakhirPerjalanan);
     }
 
     return this.travelRepository.update(id, data);
