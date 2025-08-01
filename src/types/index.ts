@@ -1,3 +1,5 @@
+import { Role } from "@prisma/client";
+
 export interface CreateEmployeeDto {
   email: string;
   username: string;
@@ -42,4 +44,26 @@ export interface JwtPayload {
   username: string;
   role?: string;
   type: "employee" | "tourist";
+}
+
+export interface EmployeeWithoutPassword {
+  id: string;
+  email: string;
+  username: string;
+  name: string;
+  role: Role;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface TouristWithoutPassword {
+  id: string;
+  email: string;
+  username: string;
+  name: string;
+  phone: string | null;
+  address: string | null;
+  dateOfBirth: Date | null;
+  createdAt: Date;
+  updatedAt: Date;
 }
