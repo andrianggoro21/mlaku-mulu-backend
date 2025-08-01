@@ -14,17 +14,13 @@ travelRouter.use(authenticateToken);
 
 travelRouter.get("/my-travels", requireTourist, travelController.getMyTravels);
 
-travelRouter.get("/tourist/:touristId", travelController.getTravelsByTouristId);
+travelRouter.use(requireEmployee);
 
-travelRouter.post(
-  "/",
-  requireEmployee,
-  validateCreateTravel,
-  travelController.createTravel
-);
-travelRouter.get("/", requireEmployee, travelController.getAllTravels);
+travelRouter.get("/tourist/:touristId", travelController.getTravelsByTouristId);
+travelRouter.post("/", validateCreateTravel, travelController.createTravel);
+travelRouter.get("/", travelController.getAllTravels);
 travelRouter.get("/:id", travelController.getTravelById);
-travelRouter.put("/:id", requireEmployee, travelController.updateTravel);
-travelRouter.delete("/:id", requireEmployee, travelController.deleteTravel);
+travelRouter.put("/:id", travelController.updateTravel);
+travelRouter.delete("/:id", travelController.deleteTravel);
 
 export default travelRouter;
