@@ -12,9 +12,9 @@ export class TouristController {
     try {
       const tourist = await this.touristService.createTourist(req.body);
       res.status(201).json({
+        status: "success",
         message: "Tourist created successfully",
         data: tourist,
-        status: "success",
       });
     } catch (error) {
       next(error);

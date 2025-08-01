@@ -48,9 +48,9 @@ export class TravelController {
       const { id } = req.params;
       const travel = await this.travelService.getTravelById(id);
       res.status(200).json({
+        status: "success",
         message: "Travel retrieved successfully",
         data: travel,
-        status: "success",
       });
     } catch (error) {
       next(error);

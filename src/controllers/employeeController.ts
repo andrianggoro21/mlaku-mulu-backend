@@ -12,9 +12,9 @@ export class EmployeeController {
     try {
       const employee = await this.employeeService.createEmployee(req.body);
       res.status(201).json({
+        status: "success",
         message: "Employee created successfully",
         data: employee,
-        status: "success",
       });
     } catch (error) {
       next(error);
