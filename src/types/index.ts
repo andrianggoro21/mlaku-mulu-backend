@@ -1,11 +1,11 @@
-import { Role } from "@prisma/client";
+import { Role, TravelStatus } from "@prisma/client";
 
 export interface CreateEmployeeDto {
   email: string;
   username: string;
   password: string;
   name: string;
-  role?: "ADMIN" | "STAFF";
+  role?: Role;
 }
 
 export interface CreateTouristDto {
@@ -13,9 +13,9 @@ export interface CreateTouristDto {
   username: string;
   password: string;
   name: string;
-  phone?: string;
-  address?: string;
-  dateOfBirth?: Date;
+  phone?: string | null;
+  address?: string | null;
+  dateOfBirth?: Date | null;
 }
 
 export interface CreateTravelDto {
@@ -31,7 +31,7 @@ export interface UpdateTravelDto {
   tanggalBerakhirPerjalanan?: Date;
   destinasiPerjalanan?: any;
   notes?: string;
-  status?: "PLANNED" | "ONGOING" | "COMPLETED" | "CANCELLED";
+  status?: TravelStatus;
 }
 
 export interface LoginDto {
