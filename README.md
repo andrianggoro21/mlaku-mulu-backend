@@ -2,6 +2,9 @@
 
 Backend API untuk Biro Perjalanan Mlaku-Mulu - Sistem manajemen turis dan perjalanan
 
+## Docs
+Folder `docs` berisi **Postman Collection** untuk pengujian API
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -161,7 +164,7 @@ src/
 
 Cek status aplikasi:
 ```bash
-GET /health
+GET /api/health
 ```
 
 Response:
